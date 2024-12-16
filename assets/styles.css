@@ -1,0 +1,22 @@
+ /* LED indicator styles */
+ .led-indicator {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: gray;
+  /* Off state */
+}
+
+.led-on {
+  background-color: green;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.custom-icon {
+  font-size: 3rem; /* Change this value to adjust the size */
+  color: #007bff; /* Optional: change color if needed */
+}
