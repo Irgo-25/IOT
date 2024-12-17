@@ -23,9 +23,9 @@ $control =  $mqtt->subscribeAndWaitForMessage('g231220017/control', 0);
 
 $mqtt->close();
 
-// $DB = new DB();
-// $db_message = $DB->insert($temperature, $humidity);
-// $sensors_data = $DB->getSensorsData();
+$DB = new DB();
+$db_message = $DB->insert($temperature, $humidity);
+$sensors_data = $DB->getSensorsData();
 
 header('Content-Type: application/json');
 
@@ -33,8 +33,8 @@ $response = json_encode([
     "temperature" => $temperature,
     "humidity" => $humidity,
     "control" => json_decode($control),
-    // "db_message" => $db_message,
-    // "sensors_data" => $sensors_data
+    "db_message" => $db_message,
+    "sensors_data" => $sensors_data
 ]);
 
 echo $response;
